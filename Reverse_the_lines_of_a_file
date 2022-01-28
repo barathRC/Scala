@@ -1,0 +1,23 @@
+import java.io._
+
+val writer = new PrintWriter(new File("demo2.txt"))
+
+writer.write("One Two Three")
+
+writer.write(“One Two Three”)
+
+writer.write(“Four Five Six”)
+
+writer.write(“Seven Eight nine”)
+
+writer.close()
+
+import scala.io.Source
+
+Source.fromFile.(“demo2.txt”).mkString
+
+Source.fromFile.(“demo2.txt”).getLines.forEach{x=>println(x)}
+
+val lines =  Source.fromFile.(“demo2.txt”).getLines.toArray
+
+val reverselines =  lines.reverse
