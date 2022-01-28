@@ -1,0 +1,10 @@
+var arr = Array(-1,-2,-2,0,23,99,100,1)
+
+arr.reduceLeft(_ max _)
+
+
+var arr2 = Array(-1,-2,0,1)
+
+arr2.reduceLeft(_ max _)
+
+
