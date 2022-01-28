@@ -1,0 +1,29 @@
+class AccntInfo {
+private var bal :Int = 100
+def  balance: Int = bal
+def deposit(amt: Int): Boolean = {
+if (amt > 0) {
+bal += amt  
+}
+true
+}
+def withdraw(amt: Int): Boolean = {
+if(amt < bal) {
+bal -= amt }
+true
+}
+else
+{
+false
+}
+}
+}
+
+val acc = new AccntInfo
+
+acc deposit 100
+
+acc withdraw 200
+
+acc withdraw 20
+
