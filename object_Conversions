@@ -1,0 +1,16 @@
+abstract class Unitconv(convfactor: Double) {
+def toconvert(d: Double): Double = d * convfactor
+}
+
+object inchestofeet extends Unitconv(0.0833) {
+println(toconvert(2))
+}
+
+object milestokms extends Unitconv(1.609) {println(toconvert(2))}
+
+object poundstokilos extends Unitconv(0.454) {println(toconvert(2))}
+
+
+inchestofeet
+milesstokms
+poundstokilos
