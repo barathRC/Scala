@@ -1,0 +1,17 @@
+val writer = new PrintWriter(new File("filterwords.txt"))
+
+writer.write("Disneyland NorthHampshire Guadalajara Venezuala Congo Tokyo Berlin Hollywood")
+
+writer.write("\nTibet Himalayas Vellaiyangirihills Merkkuththodarchchimalai Ooty Manila")
+
+writer.write("\nChicago Neworleans Austin Oakland Phoenix Maria")
+
+writer.close()
+
+
+
+
+
+Source.fromFile(“filterwords.txt”).mkString.split("\\W+").filter(_.length > 10).foreach(println(_))
+
+Val filwrds = Source.fromFile(“filterwords.txt”).mkString.split("\\W+").filter(_.length > 10).foreach(println(_))
