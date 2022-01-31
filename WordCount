@@ -1,0 +1,19 @@
+
+
+/* Map */
+
+var a = sc.textfile("/home/wordcount/words").flatMap(line => line.split(" ").map(word => (word,1));
+
+
+// hi
+// how
+// are you
+// doing
+// are you well
+// you say hi
+
+/* reduce */
+
+var b = a.reduceByKey(_ + _);
+
+b.collect
