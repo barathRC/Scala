@@ -1,0 +1,20 @@
+With Scala currying, we can take a function that takes multiple arguments and turn it into a series of functions that take single arguments each. 
+These come in handy working with higher-order functions. With this, we can also fill in only the arguments we have yet.
+
+
+scala> def mul(a:Int,b:Int)=a*b
+mul: (a: Int, b: Int)Int
+scala> mul(3,4)
+
+
+res48: Int = 12
+
+We can define it as follows:
+
+scala> def mul(a:Int)(b:Int)=a*b
+mul: (a: Int)(b: Int)Int
+scala> val mid=mul(3)(_)
+mid: Int => Int = $$Lambda$1540/90644757@43fe3f7
+scala> mid(4)
+
+res49: Int = 12
