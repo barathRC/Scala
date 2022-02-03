@@ -1,0 +1,119 @@
+
+Scala Reference Guide
+Packages
+import scala.collection._ wildcard to import everything from the collection library import scala.collection.Vector specific import for the Vector class
+import scala.collection.{Vector, Sequence} import multiple classes
+  package pkgname
+Operators
+declare a package
+infix notation where op can be +, -, *, /, % postfix notation
+compares two objects (calls equals method)
+; optional end of line
+-> returns a two element tuple for a key, value pair
+<- assign to in a for comprehension
+=> used in function literals to separate arguments from the function body :: cons operator
+// single-line comment
+/*...*/ multiline comment
+Relational Operators
+|| or && and ! not
+Comparison
+== equals
+< less than
+> greater than
+<= less than or equal to >= greater than or equal to
+x op y is x.op(y)
+x op is x.op( )
+x == y
+There is no ++, -- in Scala
+Symbols
+
+Lambda Expression
+( x:Int) => x * x
+(1 to 5).map(2 * _)
+val x = (1 to 5).map {2 * _
+println(x)
+x }
+(1 to 10) filter { _ % 2==0}
+anonymous function to square x
+anonymous function using bound infix method, multiplies 1,2,3,4,5 by 2 multiplies each value by 2
+print x
+returns x (Vector (2, 4, 6, 8, 10)
+only returns even numbers; creates vector (2, 4, 6, 8, 10)
+(1 to 10) filter { _ % 2==0} map { _ * 2} multiplies all even values by 2; creates vector (4, 8, 12, 16, 20)
+Variables
+var
+var myVar:Int val
+val myVal:String
+Data Types Byte
+Short
+Int
+Long Float Double Boolean String Char Unit Null Nothing Any AnyRef
+creates a mutable variable
+creates a mutable integer variable
+creates an immutable variable
+creates an immutable String variable ( or val myVal = “Monday”)
+
+
+Functions
+def f(x:Int) = {...} define function f, with parameter x, an integer; no return type specified def times3(x:Int) = 3 * x
+val f = (x:Int) => 3 * x anonymous function call
+def message(x:Int){ //function returns unit since it has no = sign; prints Hello world x times for(i<-(1 to x)) println(“Hello World”) }
+def message(x:String, intro:String =”Dear”) { //use a default value for intro println(intro + “,” + x) }
+def f(x: R)
+def f(x: => R)
+def sum(xs:Int*):Int = {
+// * indicates variable number of args
+var r = 0
+for(x <- xs) r += x r}
+def sum(xs:Int*):Int = //same results as above if(xs.length == 0) 0 else xs.head + sum(xs.tail : _*)
+Data Structures
+call by value
+call by name (reference)
+//return type required for recursive functions
+tuple literal
+tuple unpacking via pattern matching
+creates an immutable list called xs
+access the element at location zero, indexing adds 4 to the front of the list creating List(4,3,2,1)
+(1,2,3)
+var(a,b,c) = (1,2,3)
+var xs = List(1,2,3)
+xs(0)
+4::List(3,2,1)
+1 to 10
+1 until 10
+val list = List.range(1,11) creates a List of values excluding the upper bounds
+range of numbers from 1 to 10 inclusive
+range of numbers from 1 to 9, excludes upper bound
+
+Decision Statements
+If(expr that evaluates to true/false) println(“true”) else println(“false”)
+Loops
+while(expr) {...}
+do{...} while(expr)
+for(x <- myList) println(x)
+for(x <- myList if x%2 == 0) yield x*10 for(x <- 1 to 10) {...}
+Pattern Matching
+val x = r match {
+case ‘0’ => ...
+case ch if someProperty(ch) => ... case e: Employee => ...
+case (x,y) => ...
+case Some(v) => ...
+case 0 :: tail => ... case _ => ...
+Escape Sequences
+\b backspace
+\t tab
+\n newline
+\r carriage return \” double quote \’ single quote
+\\ backslash
+
+
+execute a body of code while the expr is true
+execute a body of code at least once, continue while expr is true print all values of x from the List called myList
+for comprehension
+//match a value
+//add a guard to the match criteria
+//match runtime type
+//destructures pairs
+//case classes have extractors
+//infix notation for extractors yielding a pair //default case
+
