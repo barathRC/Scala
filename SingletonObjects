@@ -1,0 +1,31 @@
+object SingletonObjects extends App{
+
+
+
+val myobj = new myClass1()
+ // println(myobj.x)
+  println(myobj.myfun1)
+
+  println(myObject.y)
+  println(myObject.myfun2)
+
+}
+
+class myClass1  // they can access each other private variable in scope
+{
+ private var x = 43
+  def myfun1 = println("Hi i am class functions")
+  println(myClass1.z)
+}
+
+object myClass1   // act as companion object
+{
+  private var z = 48
+
+}
+
+object myObject
+{
+  var y = 45
+  def myfun2 = println("Hi I am singleton object function")
+}
