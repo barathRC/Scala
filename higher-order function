@@ -1,0 +1,13 @@
+This is a feature of Scala. A higher-order function is one that takes another as a parameter, or that returns a function.
+
+
+scala> def func1(s:String){
+    | println("I love "+s)
+    | }
+func1: (s: String)Unit
+scala> def func2(f:String=>Unit,s:String){
+    | f(s)
+    | }
+func2: (f: String => Unit, s: String)Unit
+scala> func2(func1, "pizza")
+I love pizza
