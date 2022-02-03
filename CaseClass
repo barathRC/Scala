@@ -1,0 +1,28 @@
+object CaseClassDemo extends App{
+
+  case class Person (name:String, age: Int)
+
+  //1. calss parameters are also fields
+
+  val pavanobj = new Person("pavan", 34)
+  println(pavanobj.name)
+  println(pavanobj.age)
+// 2. sensibe to String function
+  println(pavanobj)
+
+  //3. equals and hashcode
+
+  val pavanobj1 = new Person("pavan", 35)
+
+  println(pavanobj == pavanobj1)
+//4. cc have handy copy methods
+
+  val pavanobject2 = pavanobj1.copy(age = 40)
+
+  println(pavanobject2)
+
+  //5. cdc have compainion object
+  val singletonclass = Person
+  val myobj1 = new Person("purnima", 34)
+  val achal = Person("achal", 36)
+}
