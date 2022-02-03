@@ -1,0 +1,99 @@
+import ScalaBasics.mystring
+
+object ScalaBasics extends App{
+
+  //Data Types
+  val aInt: Int = 45
+  val aLong = 2222222222L
+  val aDouble = 4.04
+
+  val aFloat = 4.04f
+
+  // val and var ( way to declare variables)
+
+  var aString = "pavan reddy"
+  aString = "pavan kumar reddy"
+
+  val aString1 = "pavan reddy"
+  //aString1 = "pavan kumar reddy"
+
+
+  // scopes
+
+  //aString = 123
+
+  // codeblocks
+
+  val mycodeblock = {
+    val mylocalblock = "pavan"
+
+    mylocalblock
+    4
+  }
+
+  // CONTROL STRUCTURE
+
+  // IF EXPRESSIONS
+
+  val x = 5
+
+  val s = if ( x > 0 && x < 6) 1 else 0
+  val s1 = if ( x > 0 && x < 6) "pavan" else 0
+
+  println(s1)
+
+  // while loop
+
+  var mystring = "pavan reddy"
+  println("length is :" + mystring.length)
+
+  var i = 0
+  while(i < mystring.length)
+    {
+      println(mystring(i))
+      i += 1
+    }
+
+  // foreach loop
+
+  var myvar = "Tcs India Spark"
+  myvar.foreach(x => println(x))
+
+  var mynumber = List(1,2,3,4,5,6,7)
+  mynumber.foreach(x => println(x))
+
+  mynumber.foreach(println)
+
+
+  // for loop
+  // range element ( 1 to 10)
+
+  for ( i <- 1 to 10)
+    println(i + 1)
+
+
+  for ( i <- mynumber)
+    println(i + 1)
+
+
+
+  // ADVANCE FOR LOOPS
+
+  for( i <- 0 to 5; j <- 0 to 5)
+    println(10*i + j)
+
+
+  for( i <- 0 to 5; j <- 0 to 5 if i==j)
+    println(10*i + j)
+
+
+  // for loop using yield
+
+  val mycollection = for ( i <- 1 to 20)
+    yield i * 1.5
+
+  mycollection.foreach(println)
+
+
+
+}
