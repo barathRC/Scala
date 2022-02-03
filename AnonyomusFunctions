@@ -1,0 +1,14 @@
+object AnonyomusFunctionDemo extends App{
+
+
+  val p =(a:Int, b:Int) => a + b
+  println(p.apply(3,4))
+  println(p(3,4))
+// lambda function
+  var q = () => println("hello no name function")
+
+  println(q())
+
+  // It is very user function which can be used inside another function  fun(fun())
+
+}
