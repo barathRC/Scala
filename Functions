@@ -1,0 +1,47 @@
+object FunctionsDemo extends App{
+
+  def f_name(a:Int, b:Int): Int = a + b
+  println(f_name(3,4))
+
+  def f_paramless():Unit = println("heloo tcs")
+  println(f_paramless())
+  println(f_paramless)
+
+  // USE FUNCTIONS INSTEAD OF LOOPS IN REAL WORLD // Recursive function // calling a function within function
+
+  def loopfunction(a: String, n: Int): String = {
+    if(n == 1) a
+    else a + loopfunction(a, n-1)
+  }
+  println(loopfunction("pavan", 5))
+
+
+  // I can have function with in function as well ( bigfunction( small function))  // Auxilary functions
+
+  def bigfunction(n:Int):Int ={
+    def smallFunction(a:Int, b:Int) = a + b
+    smallFunction(n, n-1)
+  }
+
+
+  def +(a:Int, b: Int) = a + b
+
+  println(bigfunction(5))
+
+
+  def factorial(n: Int):Int = {
+    if (n<= 0) 1
+    else n*factorial(n-1)
+  }
+
+  println(factorial(5))
+
+
+
+}
+// 5*factorial(4)
+//5*4* factorial(3)
+//5*4*3*factorial(2)
+//5*4*3*2*factorial(1)
+//5*4*3*2*1*factorial(0)
+//5*4*3*2*1*1
