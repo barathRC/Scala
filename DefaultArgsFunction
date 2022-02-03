@@ -1,0 +1,10 @@
+object DefaultArgsFunction extends App{
+
+  def fname(a:Int = 0, b:Int = 0): Int = a + b
+
+  println(fname(0,4))
+  println(fname())
+  println(fname(3, 4))
+
+
+}
