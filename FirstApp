@@ -1,0 +1,9 @@
+object myFirstApp {
+
+  def main(args: Array[String]): Unit = {
+
+    println("Hi tcs india, this is our first app")
+  }
+
+
+}
