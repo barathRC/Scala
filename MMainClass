@@ -1,0 +1,16 @@
+object MMainClass extends App{
+
+  // create instance of it
+
+  val myobj = new myClass()  // trying to update your update (mutator) ()
+
+  println(myobj.i = 15)
+  println(myobj.myfunc)
+
+}
+
+class myClass
+{
+  var i = 10
+  def myfunc() = { println("hello classes")}
+}
