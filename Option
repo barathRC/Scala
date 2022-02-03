@@ -1,0 +1,8 @@
+A Scala Option is a kind of a container. It can hold zero or one element of a type. 
+When it holds a value, it holds Some[T]; otherwise, it holds a None object, as we discussed in the previous question.
+
+
+scala> val o:Option[Int]=Some(7)
+o: Option[Int] = Some(7)
+scala> val o1:Option[Int]=None
+o1: Option[Int] = None
