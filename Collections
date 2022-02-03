@@ -1,0 +1,57 @@
+object CollectionDemo extends App{
+
+  // Sequence vs list  ( sequence store result in fixed order it is indexed with zero)
+  // list order of linkelist
+
+  val aSeq = Seq(1, 2, 3,4,5)
+
+  val unsorted = aSeq ++ Seq(6,8,7,9,10)
+  println(aSeq)
+  println(aSeq.reverse)
+  println(aSeq(2))
+  println( aSeq ++ Seq(6,8,7,9,10))
+  println(unsorted.sorted)
+
+  // RANGES
+  // 1 TO 100  TO OR UNTIL
+
+  val myRange = 1 to 10
+myRange.foreach(println)
+  val myanotherRange = 1 until(10)
+  myanotherRange.foreach(println)
+
+  // List
+
+  val aList = List(1, 2,3,4,5,6)
+  val prepended = 42 +: aList :+ 87
+  println(prepended)
+
+  val anotherlist = 1 :: 2 :: 3 :: 4 :: Nil
+  println(anotherlist)
+
+  val pavan5 = List.fill(5)("pavan")
+  println(pavan5)
+  println(pavan5.mkString(" -|-"))
+
+  // Arrays
+
+  val myArray = Array(1, 2, 3,4)
+  val myempty = Array()
+
+  val newArray = new Array[Int](10)
+
+ newArray.foreach(println)
+  println(myempty.length)
+  println(myArray(0))
+  println(myArray.min)
+
+  import scala.collection.mutable.ArrayBuffer
+
+  var myarraybuffer = new ArrayBuffer[Int]()
+  myarraybuffer += 1
+  myarraybuffer += (2,3,4)
+  myarraybuffer ++= Array(5,6, 7)
+  println(myarraybuffer)
+
+
+}
