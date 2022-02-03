@@ -1,0 +1,20 @@
+A closure in Scala is a function whose value depends on variables declared outside of it. Let’s take an example.
+
+
+scala> var c=5
+c: Int = 5
+scala> val mul2=(a:Int,b:Int)=>(a+b)*c
+mul2: (Int, Int) => Int = $$Lambda$1533/239864031@6d90e705
+scala> mul2(2,3)
+
+res45: Int = 25
+
+
+scala> c=7
+c: Int = 7
+scala> mul2(2,3)
+
+
+In this example, mul2 reads the new value of ‘c’ when we call it a second time.
+
+For more on closures, refer to Closures in Scala.
