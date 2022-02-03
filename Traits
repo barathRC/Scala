@@ -1,3 +1,5 @@
+#1
+
 object TraitDemo extends App{
 
 
@@ -34,3 +36,24 @@ object TraitDemo extends App{
   myobj.myfun1()
 
 }
+
+#2
+A trait is like a partially implemented interface that can hold abstract and non-abstract methods. 
+They’re like Java interfaces; that is what Scala compiles them into. Let’s take an example.
+
+scala> trait Hello{
+    | def sayhello()
+    | }
+defined trait Hello
+
+
+scala> class A extends Hello{
+    | def sayhello(){
+    | println("Hello")
+    | }
+    | }
+defined class A
+scala> var a=new A()
+a: A = A@10e595ed
+scala> a.sayhello()
+Hello
