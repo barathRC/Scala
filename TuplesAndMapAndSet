@@ -1,0 +1,53 @@
+object TuplesAndMapAndSet extends App{
+
+  // tuple finite order of list
+
+  var aTuple:(String, Float, Int)= ("pavan", 4.4f, 5)
+  println(aTuple._1)
+  println(aTuple._2)
+  println(aTuple.copy(_2 = "Hello TCS"))
+
+  val bTuple = ("pavan", "reddy")
+  println(bTuple.swap)
+
+
+  // MAP COLLECTION  (key -> value)  <- generator  => lambda function
+
+  val aMap: Map[String, Int] = Map()
+
+  val mymap =  Map(("rahul", 326), ("lavina", 330), ("bharath", 329), ("achal", 330))
+
+  val mymapsugar1 =  Map("rahul" -> 326, "lavina"-> 330, "bharath"-> 329, "achal"->330)
+
+  println(mymapsugar1)
+
+  println(mymapsugar1.contains("achal"))
+  println(mymapsugar1("achal"))
+
+  val anothermap = Map("pavan" ->(45, 46), "himanshu" -> (34, 45))
+
+  val mynewpair = "himanshu"-> 326
+
+  val newmymapsugar1 = mymapsugar1 + mynewpair
+
+  println(newmymapsugar1)
+
+
+  // set  (1,1,2,2,3,3,3,3,4,4,4)
+
+  val s = Set(1,1,1,2,2,2,2,2,3,3,3,3,3,3,3)
+
+  println(s)
+
+  val s2 = Set(1,1,1,1 ,1,4,4,5,5)
+
+
+  val s3 = s ++s2
+
+  println(s3)
+
+
+
+
+
+}
