@@ -1,0 +1,36 @@
+object TraitDemo extends App{
+
+
+  trait A
+  {
+    var myvariable:Int
+    def myfun();
+    def myfullfunction = {println("Hi i am implemented")}
+
+  }
+
+  trait B
+  {
+    def myfun1();
+    def myfun2();
+    var variable2: Int
+  }
+
+  class myAimpl extends A with B with C
+  {
+    override def myfun(): Unit = "I am implementing in my class"
+    override var myvariable: Int = 4
+
+    override def myfun1(): Unit = println("I am fun1")
+
+    override def myfun2(): Unit = println("I am fun2")
+
+    override var variable2: Int = 5
+  }
+ trait C extends B
+  val myobj = new myAimpl
+  myobj.myfun()
+  myobj.myvariable
+  myobj.myfun1()
+
+}
