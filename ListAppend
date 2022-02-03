@@ -1,0 +1,16 @@
+
+
+scala> var a=List.empty[String]
+a: List[String] = List()
+scala> a :+="red"
+scala> a :+="green"
+scala> a :+="blue"
+scala> a
+
+res40: List[String] = List(red, green, blue)
+
+//And now, appending a List to this
+scala> a++=List("golden","bronze")
+scala> a
+
+res42: List[String] = List(red, green, blue, golden, bronze)
